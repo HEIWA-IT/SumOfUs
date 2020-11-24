@@ -4,7 +4,7 @@ public class Trip {
 
     private String destination;
 
-    private String travelClass;
+    private TravelClass travelClass;
 
     private Integer ticketPrice;
 
@@ -12,7 +12,7 @@ public class Trip {
 
     private Integer agencyFees;
 
-    public Trip(String destination, String travelClass, Integer ticketPrice, Integer stayFees, Integer agencyFees) {
+    public Trip(String destination, TravelClass travelClass, Integer ticketPrice, Integer stayFees, Integer agencyFees) {
         this.destination = destination;
         this.travelClass = travelClass;
         this.ticketPrice = ticketPrice;
@@ -21,11 +21,6 @@ public class Trip {
     }
 
     public Integer calculatedPrice() {
-        if (destination.equals("Lille")) {
-            return 0;
-        } else if (destination.equals("New-York")) {
-            return 2700;
-        }
-        return 1050;
+        return (this.ticketPrice * travelClass.coefficient()) + this.stayFees + this.agencyFees;
     }
 }

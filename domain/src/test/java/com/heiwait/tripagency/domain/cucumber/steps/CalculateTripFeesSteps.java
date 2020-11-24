@@ -1,5 +1,6 @@
 package com.heiwait.tripagency.domain.cucumber.steps;
 
+import com.heiwait.tripagence.domain.cucumber.TravelClass;
 import com.heiwait.tripagence.domain.cucumber.Trip;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
@@ -11,7 +12,7 @@ public class CalculateTripFeesSteps {
 
     private String destination;
 
-    private String travelClass;
+    private TravelClass travelClass;
 
     private Integer ticketPrice;
 
@@ -28,7 +29,7 @@ public class CalculateTripFeesSteps {
     }
 
     @Given("^the customer wants to travel in \"([^\"]*)\" class$")
-    public void the_customer_wants_to_travel_in_class(String travelClass) {
+    public void the_customer_wants_to_travel_in_class(TravelClass travelClass) {
     // Write code here that turns the phrase above into concrete actions
         this.travelClass = travelClass;
     }
