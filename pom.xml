@@ -12,7 +12,6 @@
 
     <modules>
         <module>domain</module>
-        <module>repository</module>
     </modules>
 
     <properties>
