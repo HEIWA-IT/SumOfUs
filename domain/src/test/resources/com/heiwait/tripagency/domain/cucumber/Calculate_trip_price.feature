@@ -27,7 +27,7 @@ Feature: as a travel agency, I want to calculate travel fees depending on the de
     Examples:
       | destination | travelClass | ticketPrice | stayFees | agencyFees | tripPrice |
       | "Paris"     | "FIRST"     | 100         | 800      | 50         | 1050      |
-#      | "Lille"     | "ECONOMIC"  | 0           | 0        | 0          | 0         |
+      | "Lille"     | "ECONOMIC"  | 0           | 0        | 0          | 0         |
 #      | "New-York"  | "FIRST"     | 800         | 1000     | 100        | 2700      |
 #      | "Tokyo"     | "BUSINESS"  | 1200        | 1000     | 100        | 7100      |
 #      | "Beijing"   | "ECONOMIC"  | 1000        | 1000     | 100        | 2100      |
