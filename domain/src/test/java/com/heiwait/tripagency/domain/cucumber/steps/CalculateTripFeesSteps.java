@@ -1,7 +1,9 @@
 package com.heiwait.tripagency.domain.cucumber.steps;
 
+import com.heiwait.tripagence.domain.cucumber.Pricer;
 import com.heiwait.tripagence.domain.cucumber.TravelClass;
 import com.heiwait.tripagence.domain.cucumber.Trip;
+import com.heiwait.tripagence.domain.cucumber.TripRepositoryMock;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -55,8 +57,9 @@ public class CalculateTripFeesSteps {
     @When("^the customer asked for the trip price")
     public void the_customer_asked_for_the_trip_price() {
     // Write code here that turns the phrase above into concrete actions
-        var trip = new Trip(destination, travelClass, ticketPrice, stayFees, agencyFees);
-        this.calculatedPrice = trip.calculatedPrice();
+        var mock = new TripRepositoryMock();
+        var pricer = new Pricer(mock);
+        this.calculatedPrice = pricer.priceTrip(this.destination, this.travelClass);
     }
 
 
