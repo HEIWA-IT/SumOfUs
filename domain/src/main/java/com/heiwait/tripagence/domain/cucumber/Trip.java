@@ -2,17 +2,18 @@ package com.heiwait.tripagence.domain.cucumber;
 
 public class Trip {
 
-    private String destination;
+    private final String destination;
 
-    private TravelClass travelClass;
+    private final TravelClass travelClass;
 
-    private Integer ticketPrice;
+    private final Integer ticketPrice;
 
-    private Integer stayFees;
+    private final Integer stayFees;
 
-    private Integer agencyFees;
+    private final Integer agencyFees;
 
-    public Trip(String destination, TravelClass travelClass, Integer ticketPrice, Integer stayFees, Integer agencyFees) {
+    public Trip(final String destination, final TravelClass travelClass, final Integer ticketPrice,
+                final Integer stayFees, final Integer agencyFees) {
         this.destination = destination;
         this.travelClass = travelClass;
         this.ticketPrice = ticketPrice;
