@@ -78,7 +78,7 @@ function gradle()
 function mvnw()
 {
   echo "Using mvnw"
-  ./mvnw deploy -pl !e2e -Drevision="${VERSION}" ${MVN_SETTINGS} || exit 1
+  ./mvnw deploy -Drevision="${VERSION}" ${MVN_SETTINGS} || exit 1
 }
 
 ################################################################################
@@ -87,7 +87,7 @@ function mvnw()
 function mvn()
 {
   echo "Using mvnw"
-  mvn deploy -pl !e2e -Drevision="${VERSION}" ${MVN_SETTINGS} || exit 1
+  mvn deploy -Drevision="${VERSION}" ${MVN_SETTINGS} || exit 1
 }
 
 ################################################################################
